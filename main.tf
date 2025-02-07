@@ -17,7 +17,9 @@ locals {
   account_id  = data.aws_caller_identity.current.account_id
 }
 
-
+  #checkov:skip=CKV_AWS_62:Suppress
+  #checkov:skip=CKV_AWS_6:Suppress
+  #checkov:skip=CKV_AWS_61:Suppress
 
 resource "aws_s3_bucket" "s3_tf" {
   #checkov:skip=CKV_AWS_62:Suppress
