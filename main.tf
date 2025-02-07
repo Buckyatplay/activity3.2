@@ -18,7 +18,7 @@ locals {
 }
 
 resource "aws_s3_bucket" "s3_tf" {
-  bucket = local.name_prefix-s3-tf-bkt-local.account_id
+  bucket = "${local.name_prefix}-s3-tf-bkt-${local.account_id}"
 }
 
 terraform {
@@ -31,5 +31,5 @@ terraform {
 }
 
 terraform {
-  required_version = ">= 1.0" 
+  required_version = ">= 1.0"
 }
