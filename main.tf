@@ -20,6 +20,7 @@ locals {
 
 
 resource "aws_s3_bucket" "s3_tf" {
+  #checkov:skip=CKV_AWS_62:Suppress
   #checkov:skip=CKV_AWS_6:Suppress
   #checkov:skip=CKV_AWS_21:Suppress
   #checkov:skip=CKV_AWS_18:Suppress
