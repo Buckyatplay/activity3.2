@@ -17,11 +17,13 @@ locals {
   account_id  = data.aws_caller_identity.current.account_id
 }
 
+
+
+resource "aws_s3_bucket" "s3_tf" {
   #checkov:skip=CKV_AWS_6:Suppress
   #checkov:skip=CKV_AWS_21S:Suppress
   #checkov:skip=CKV_AWS_18:Suppress
   #checkov:skip=CKV_AWS_61:Suppress
-resource "aws_s3_bucket" "s3_tf" {
   #checkov:skip=CKV_AWS_144:Suppress
   #checkov:skip=CKV_AWS_145:Suppress
   bucket = "${local.name_prefix}-s3-tf-bkt-${local.account_id}"
